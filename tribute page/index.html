@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute Page to John Pombe Magufuli</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>John Pombe Magufuli</h1>
+        <p>1959 - 2021</p>
+    </header>
+    <main>
+        <section class="intro">
+            <img src="magufuli.jpg" alt="John Pombe Magufuli">
+            <p class="intro-text">John Pombe Magufuli was the fifth President of Tanzania, serving from 2015 until his passing in 2021. He was known for his strong leadership and efforts to combat corruption and promote economic growth in Tanzania.</p>
+        </section>
+        <section class="biography">
+            <h2>Biography</h2>
+            <p>John Magufuli was born on October 29, 1959, in Chato, Tanzania. He earned a degree in education from the University of Dar es Salaam and later a doctorate in chemistry. Magufuli began his political career in the early 1990s and quickly rose through the ranks of the ruling party, Chama Cha Mapinduzi (CCM).</p>
+            <p>As President, Magufuli was nicknamed "The Bulldozer" for his hands-on approach to leadership and his commitment to tackling inefficiency and corruption. His presidency was marked by significant infrastructure projects, including road construction and the expansion of public services.</p>
+        </section>
+        <section class="achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Increased government revenue through tax reforms</li>
+                <li>Implemented free education for primary and secondary schools</li>
+                <li>Expanded healthcare services across the country</li>
+                <li>Improved infrastructure, including roads and railways</li>
+                <li>Enhanced industrialization and economic growth</li>
+            </ul>
+        </section>
+        <section class="quotes">
+            <h2>Quotes</h2>
+            <button onclick="showQuote()">Show Inspirational Quote</button>
+            <p id="quote"></p>
+        </section>
+        <section class="timeline">
+            <h2>Timeline of Major Events</h2>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2015</h3>
+                    <p>John Magufuli was elected as the President of Tanzania.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2016</h3>
+                    <p>Introduced free education policy for primary and secondary schools.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2017</h3>
+                    <p>Launched major infrastructure projects including road and railway construction.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2018</h3>
+                    <p>Expanded healthcare services across the country.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2020</</div>
+                    <p>Re-elected as President of Tanzania.</p>
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <img src="photo1.jpg" alt="Event 1" class="gallery-img" onclick="openLightbox();currentSlide(1)">
+                <img src="photo2.jpg" alt="Event 2" class="gallery-img" onclick="openLightbox();currentSlide(2)">
+                <img src="photo3.jpg" alt="Event 3" class="gallery-img" onclick="openLightbox();currentSlide(3)">
+            </div>
+        </section>
+        <section class="video-tribute">
+            <h2>Video Tribute</h2>
+            <video controls>
+                <source src="tribute.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section class="contact">
+            <h2>Contact Form</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Tribute page created in memory of John Pombe Magufuli</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close cursor" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <div class="mySlides">
+                <div class="numbertext">1 / 3</div>
+                <img src="photo1.jpg" alt="Event 1">
+                <div class="caption"></div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 3</div>
+                <img src="photo2.jpg" alt="Event 2">
+                <div class="caption"></div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 3</div>
+                <img src="photo3.jpg" alt="Event 3">
+                <div class="caption"></div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="lightbox-thumbnails">
+                <img class="demo" src="photo1.jpg" onclick="currentSlide(1)" alt="Event 1">
+                <img class="demo" src="photo2.jpg" onclick="currentSlide(2)" alt="Event 2">
+                <img class="demo" src="photo3.jpg" onclick="currentSlide(3)" alt="Event 3">
+            </div>
+            <button class="slideshow-control" onclick="toggleSlideshow()">Play</button>
+        </div>
+    </div>
+</body>
+</html>
